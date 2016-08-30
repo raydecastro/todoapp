@@ -9,4 +9,23 @@ describe('Task', function () {
 
         assert.notEqual(task, undefined);
     });
+
+    it('should have a title', function (){
+        var task = new Task();
+
+        task.title = 'happiness';
+
+        assert.equal(task.title, 'happiness');
+    });
+
+    it('should have a date', function (){
+        var task = new Task();
+        var expectedDate = new Date();
+
+        task.date = expectedDate;
+
+        assert.equal(task.date, expectedDate);
+    });
+
 });
+
